@@ -104,7 +104,8 @@
                   {title:'CASINO', url:'/admin/casino', icon:'mdi-cash-usd', type: 'casino'},
                   {title:'GAMES', url:'/admin/game', icon:'mdi-gamepad-variant', type: 'game'},
                   {title:'LICENSES', url:'/admin/license', icon:'mdi-gamepad-variant', type: 'license'},
-                  {title:'ARTICLE', url:'/admin/article', icon:'mdi-gamepad-variant', type: 'article'}
+                  {title:'ARTICLE', url:'/admin/article', icon:'mdi-gamepad-variant', type: 'article'},
+                  {title:'PAYMENT', url:'/admin/payment', icon:'mdi-gamepad-variant', type: 'payment'}
                 ],
                 postTypes: [
                   {
@@ -145,6 +146,16 @@
                       { title: 'Add article', url: '/admin/article/add' },
                       { title: 'All category article', url: '/admin/article/category' },
                       { title: 'Add category article', url: '/admin/article/category/add' }
+                    ]
+                  },
+                  {
+                    title: 'Payment',
+                    type: 'payment',
+                    links: [
+                      { title: 'All payments', url: '/admin/payment' },
+                      { title: 'Add payment', url: '/admin/payment/add' },
+                      { title: 'All category payment', url: '/admin/payment/category' },
+                      { title: 'Add category payment', url: '/admin/payment/category/add' }
                     ]
                   }
                 ]
