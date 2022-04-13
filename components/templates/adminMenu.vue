@@ -102,7 +102,9 @@
                 links: [
                   ...commonLinks,
                   {title:'CASINO', url:'/admin/casino', icon:'mdi-cash-usd', type: 'casino'},
-                  {title:'GAMES', url:'/admin/game', icon:'mdi-gamepad-variant', type: 'game'}
+                  {title:'GAMES', url:'/admin/game', icon:'mdi-gamepad-variant', type: 'game'},
+                  {title:'LICENSES', url:'/admin/license', icon:'mdi-gamepad-variant', type: 'license'},
+                  {title:'ARTICLE', url:'/admin/article', icon:'mdi-gamepad-variant', type: 'article'}
                 ],
                 postTypes: [
                   {
@@ -123,6 +125,26 @@
                       { title: 'Add games', url: '/admin/game/add' },
                       { title: 'All category games', url: '/admin/game/category' },
                       { title: 'Add category games', url: '/admin/game/category/add' }
+                    ]
+                  },
+                  {
+                    title: 'License',
+                    type: 'license',
+                    links: [
+                      { title: 'All license', url: '/admin/license' },
+                      { title: 'Add license', url: '/admin/license/add' },
+                      { title: 'All category license', url: '/admin/license/category' },
+                      { title: 'Add category license', url: '/admin/license/category/add' }
+                    ]
+                  },
+                  {
+                    title: 'Article',
+                    type: 'article',
+                    links: [
+                      { title: 'All article', url: '/admin/article' },
+                      { title: 'Add article', url: '/admin/article/add' },
+                      { title: 'All category article', url: '/admin/article/category' },
+                      { title: 'Add category article', url: '/admin/article/category/add' }
                     ]
                   }
                 ]

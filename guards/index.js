@@ -1,5 +1,5 @@
 /*
-all types: common, casino, game, setting, option, page
+all types: common, casino, game, setting, option, page, license, article
 */
 export default {
     roles: {
