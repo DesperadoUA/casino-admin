@@ -105,7 +105,8 @@
                   {title:'GAMES', url:'/admin/game', icon:'mdi-gamepad-variant', type: 'game'},
                   {title:'LICENSES', url:'/admin/license', icon:'mdi-gamepad-variant', type: 'license'},
                   {title:'ARTICLE', url:'/admin/article', icon:'mdi-gamepad-variant', type: 'article'},
-                  {title:'PAYMENT', url:'/admin/payment', icon:'mdi-gamepad-variant', type: 'payment'}
+                  {title:'PAYMENT', url:'/admin/payment', icon:'mdi-gamepad-variant', type: 'payment'},
+                  {title:'VENDOR', url:'/admin/vendor', icon:'mdi-gamepad-variant', type: 'vendor'}
                 ],
                 postTypes: [
                   {
@@ -156,6 +157,16 @@
                       { title: 'Add payment', url: '/admin/payment/add' },
                       { title: 'All category payment', url: '/admin/payment/category' },
                       { title: 'Add category payment', url: '/admin/payment/category/add' }
+                    ]
+                  },
+                  {
+                    title: 'Vendor',
+                    type: 'vendor',
+                    links: [
+                      { title: 'All vendors', url: '/admin/vendor' },
+                      { title: 'Add vendor', url: '/admin/vendor/add' },
+                      { title: 'All category vendor', url: '/admin/vendor/category' },
+                      { title: 'Add category vendor', url: '/admin/vendor/category/add' }
                     ]
                   }
                 ]
