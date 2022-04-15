@@ -174,7 +174,6 @@
         },
         mounted(){
           const user = this.$store.getters['user/getUser']
-          console.log(Guards.checkLinks(this.commonLinks, user.role))
           this.commonLinks = Guards.checkLinks(this.commonLinks, user.role)
           this.links = Guards.checkLinks(this.links, user.role)
           this.postTypes = Guards.checkLinks(this.postTypes, user.role)

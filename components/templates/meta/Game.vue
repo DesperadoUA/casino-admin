@@ -8,6 +8,36 @@
                     :title = '"iframe"' 
                     :action_key = '"iframe"'
                 />
+                <MM_Rating 
+                    :value = 'data.rating'
+                    :action = 'action' 
+                    :title = '"Rating"' 
+                    :action_key = '"rating"'
+                />
+                <MM_Input
+                    :value = 'data.number_games'
+                    :action = 'action' 
+                    :title = '"Number games"' 
+                    :action_key = '"number_games"'
+                />
+                <MM_Multiple_Two_Input
+                    :value = 'data.details'
+                    :action = 'action' 
+                    :title = '"Details"' 
+                    :action_key = '"details"'
+                /> 
+                <MM_Characters_Game 
+                    :value = 'data.characters'
+                    :action = 'action' 
+                    :title = '"Characters"' 
+                    :action_key = '"characters"' 
+                />
+                <MM_Multiple_Two_Input_Image 
+                    :value = 'data.galery'
+                    :action = 'action' 
+                    :title = '"Galery"' 
+                    :action_key = '"galery"' 
+                />
             </v-col>
         </v-row>
     </v-container>
