@@ -16,7 +16,7 @@
 <script>
     import MM_Multiple_Input_Text from '~/components/lib/MM_Multiple_Input_Text'
     export default {
-        name: "licenseMeta",
+        name: "articleMeta",
         props: ['data', 'action'],
         components: {MM_Multiple_Input_Text},
         data() {

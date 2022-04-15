@@ -106,7 +106,8 @@
                   {title:'LICENSES', url:'/admin/license', icon:'mdi-gamepad-variant', type: 'license'},
                   {title:'ARTICLE', url:'/admin/article', icon:'mdi-gamepad-variant', type: 'article'},
                   {title:'PAYMENT', url:'/admin/payment', icon:'mdi-gamepad-variant', type: 'payment'},
-                  {title:'VENDOR', url:'/admin/vendor', icon:'mdi-gamepad-variant', type: 'vendor'}
+                  {title:'VENDOR', url:'/admin/vendor', icon:'mdi-gamepad-variant', type: 'vendor'},
+                  {title:'Bonus', url:'/admin/bonus', icon:'mdi-gamepad-variant', type: 'bonus'}
                 ],
                 postTypes: [
                   {
@@ -167,6 +168,16 @@
                       { title: 'Add vendor', url: '/admin/vendor/add' },
                       { title: 'All category vendor', url: '/admin/vendor/category' },
                       { title: 'Add category vendor', url: '/admin/vendor/category/add' }
+                    ]
+                  },
+                  {
+                    title: 'Bonus',
+                    type: 'Bonus',
+                    links: [
+                      { title: 'All bonus', url: '/admin/bonus' },
+                      { title: 'Add bonus', url: '/admin/bonus/add' },
+                      { title: 'All category bonus', url: '/admin/bonus/category' },
+                      { title: 'Add category bonus', url: '/admin/bonus/category/add' }
                     ]
                   }
                 ]

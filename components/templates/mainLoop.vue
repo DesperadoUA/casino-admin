@@ -58,7 +58,8 @@
                     {title: 'Payment', thumbnail: 'https://admin.onlinecasino.ua/img/slots.png', link: '/admin/payment', type: 'payment'},
                     {title: 'License', thumbnail: 'https://admin.onlinecasino.ua/img/slots.png', link: '/admin/license', type: 'license'},
                     {title: 'Article', thumbnail: 'https://admin.onlinecasino.ua/img/slots.png', link: '/admin/article', type: 'article'},
-                    {title: 'Vendor', thumbnail: 'https://admin.onlinecasino.ua/img/slots.png', link: '/admin/vendor', type: 'vendor'}
+                    {title: 'Vendor', thumbnail: 'https://admin.onlinecasino.ua/img/slots.png', link: '/admin/vendor', type: 'vendor'},
+                    {title: 'Bonus', thumbnail: 'https://admin.onlinecasino.ua/img/slots.png', link: '/admin/bonus', type: 'bonus'}
                 ]
             }
         },
