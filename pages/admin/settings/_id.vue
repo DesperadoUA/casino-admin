@@ -38,6 +38,11 @@
                         :title = 'data.title'
                         :action = 'action'
                         :action_key = '"value"' />
+              <MM_Multiple_Bonus v-if = "data.editor === 'multiple_bonus'" 
+                        :value = 'data.value' 
+                        :title = 'data.title'
+                        :action = 'action'
+                        :action_key = '"value"' />
            </v-col>
       </v-row>
     </v-container>
@@ -68,12 +73,13 @@ import MM_Input from '~/components/lib/MM_Input'
 import MM_Rich_Text from '~/components/lib/MM_Rich_Text'
 import MM_Multiple_Two_Input_Image from '~/components/lib/MM_Multiple_Two_Input_Image'
 import MM_Multiple_Menu from '~/components/lib/MM_Multiple_Menu.vue'
-import Guards from '~/guards'
+import MM_Multiple_Bonus from '~/components/lib/MM_Multiple_Bonus'
 
+import Guards from '~/guards'
     export default {
         name: "singleSettings",
         layout: 'admin',
-        components: {snackeBar, MM_Image, MM_Input, MM_Rich_Text, MM_Multiple_Two_Input_Image, MM_Multiple_Menu},
+        components: {snackeBar, MM_Image, MM_Input, MM_Rich_Text, MM_Multiple_Two_Input_Image, MM_Multiple_Menu, MM_Multiple_Bonus},
         async mounted() {
             this.data.title = 'Settings single page'
           
