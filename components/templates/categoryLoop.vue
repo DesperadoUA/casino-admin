@@ -1,7 +1,7 @@
 <template>
     <v-container class="col-12 loop_container">
       <v-row class="deep-orange darken-2 pa-2 row_title font-podkova-bold white--text mb-2">
-        <v-col class="col-3" color="white">
+        <v-col class="col-4" color="white">
           <v-icon left color="white">
             mdi-folder-multiple
           </v-icon>
@@ -11,19 +11,13 @@
           <v-icon left color="white">
             mdi-comment-text
           </v-icon>
-          Short Desc
+          File id
         </v-col>
-        <v-col class="col-2">
+        <v-col class="col-3">
           <v-icon left color="white">
             mdi-calendar-check
           </v-icon>
           Data Update
-        </v-col>
-        <v-col class="col-2">
-          <v-icon left color="white">
-            mdi-check
-          </v-icon>
-          Status
         </v-col>
         <v-col class="col-1 text-right">
           <v-icon left color="white">
@@ -37,20 +31,17 @@
               :key="post.id"
               :class="[(post.status === '1') ? 'blue-grey darken-3 lighten-4 mb-2 align-center font-podkova-bold' : 'brown darken-2 mb-2 align-center font-podkova-bold']"
       >
-        <v-col class="col-3 white--text">
+        <v-col class="col-4 white--text">
           {{post.title}}
         </v-col>
-        <v-col class="col-4 white--text" v-html="post.short_desc">
+        <v-col class="col-4 white--text" v-html="post.file_id">
         </v-col>
-        <v-col class="col-2 white--text">
+        <v-col class="col-3 white--text">
           {{post.updated_at | sliceData}}
         </v-col>
-        <v-col class="col-1 white--text">
-          {{post.status | public}}
-        </v-col>
-        <v-col class="col-2 text-right">
+        <v-col class="col-1 text-right">
           <v-btn class="deep-orange darken-2"
-                 :to="`/admin/${post.post_type}/${post.id}`"
+                 :to="`/admin/files/${post.id}`"
           >Edit
             <v-icon dark
                     right>mdi-tooltip-edit</v-icon>

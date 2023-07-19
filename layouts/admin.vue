@@ -8,11 +8,12 @@
 </template>
 
 <script>
-    import AdminMenu from '../components/templates/adminMenu'
+    import AdminMenu from '~/components/templates/adminMenu'
     export default {
         name: "admin",
         components: {AdminMenu},
-        middleware: ['checkAuth']
+        middleware: ['checkAuth'],
+        
     }
 </script>
 

@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'myapp3',
+      name: 'admin',
       script: './node_modules/nuxt/bin/nuxt.js',
       args: 'start'
     }

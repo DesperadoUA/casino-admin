@@ -15,52 +15,12 @@
                                 :action_key = '"title"'
                                  />     
                     <MM_Options v-if = 'data' 
-                                :value = 'data.status' 
-                                :all_value = '["public", "hide", "basket"]'
-                                :title = '"Status"'
-                                :action = 'action'
-                                :action_key = '"status"'
-                                 />
-                    <MM_Options v-if = 'data' 
                                 :value = 'data.lang' 
                                 :all_value = '["ru", "ua"]'
                                 :title = '"Lang"'
                                 :action = 'action'
                                 :action_key = '"lang"'
                                  />
-                    <MM_Input   v-if = 'data' 
-                                :value = 'data.meta_title' 
-                                :title = '"Meta Title"' 
-                                :action = 'action'
-                                :action_key = '"meta_title"'
-                                />
-                    <MM_Input v-if = 'data' 
-                                :value = 'data.description' 
-                                :title = '"Description"'
-                                :action = 'action'
-                                :action_key = '"description"'
-                                 />
-                    <MM_Input   v-if = 'data' 
-                                :value = 'data.keywords' 
-                                :title = '"Keywords"' 
-                                :action = 'action'
-                                :action_key = '"keywords"'
-                                />
-                    <MM_Textarea v-if = 'data' 
-                                :value = 'data.short_desc' 
-                                :title = '"Short desc"'
-                                :action = 'action'
-                                :action_key = '"short_desc"' />
-                    <MM_Input   v-if = 'data' 
-                                :value = 'data.h1' 
-                                :title = '"H1"'
-                                :action = 'action'
-                                :action_key = '"h1"' />
-                    <MM_Rich_Text v-if = 'data' 
-                                :value = 'data.content' 
-                                :title = '"Content"'
-                                :action = 'action'
-                                :action_key = '"content"' />
                     <MM_Date    v-if = 'data' 
                                 :value = 'data.created_at' 
                                 :title = '"Create At"'
@@ -72,11 +32,10 @@
                                 :action = 'action'
                                 :action_key = '"updated_at"' />
                     <MM_Image   v-if = 'data' 
-                                :value = 'data.thumbnail' 
-                                :title = '"Thumbnail"'
+                                :value = 'data.path' 
+                                :title = '"Video"'
                                 :action = 'action'
-                                :action_key = '"thumbnail"' />
-                    <MM_Media_Library />
+                                :action_key = '"path"' />
            </v-col>
       </v-row>
     </v-container>

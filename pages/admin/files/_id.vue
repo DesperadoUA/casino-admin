@@ -1,17 +1,9 @@
 <template>
   <div>
-     <commonEdit v-if='data.body' 
+    <commonEdit v-if='data.body' 
                      :data = "data.body"
                      :action = 'STORE_DIR + "/changeStateCurrentPost"'>
-    </commonEdit>
-     <postMeta v-if='data.body' 
-                     :data = "data.body"
-                     :action = 'STORE_DIR + "/changeStateCurrentPost"'>
-    </postMeta>
-    <adminCategoryRelative v-if='data.body' 
-                     :data = "data.body"
-                     :action = 'STORE_DIR + "/changeStateCurrentPost"'> 
-    </adminCategoryRelative>
+    </commonEdit> 
     <v-container>
         <v-row>
           <v-col class="offset-1 col-10 mt-5 mb-10">
@@ -20,6 +12,7 @@
                   text
                   @click="update()"
           >
+          <v-icon left color="white">mdi-content-save</v-icon>
             Update
           </v-btn>
           <v-btn
@@ -37,21 +30,17 @@
                :text = "snackbar.text"
                :timeout = "snackbar.timeout"
     />
-    <postPreview v-if='data.body'  slug="payments" :permalink="data.body.permalink" />
   </div>
 </template>
 
 <script>
 import commonEdit from '~/components/templates/commonEdit'
-import adminCategoryRelative from '~/components/templates/adminCategoryRelative'
-import postMeta from '~/components/templates/meta/Category'
 import snackeBar from '~/components/templates/snackbar'
-import postPreview from '~/components/lib/MM_Post_Preview'
 import Guards from '~/guards'
     export default {
-        name: "singlePaymentCategoryPage",
+        name: "singleFilePage",
         layout: 'admin',
-        components: {commonEdit, snackeBar, adminCategoryRelative, postMeta, postPreview},
+        components: {commonEdit, snackeBar},
         async mounted() {
             const user = this.$store.getters['user/getUser']
             if(!Guards.checkRouts(this.guard, user.role)) this.$router.replace('/admin')
@@ -65,8 +54,7 @@ import Guards from '~/guards'
         },
         data(){
           return {
-              STORE_DIR: 'payment/category',
-              PATH_CATEGORY: 'payment/category',
+              STORE_DIR: 'files/post',
               data:{
                 body: undefined
               },
@@ -75,7 +63,7 @@ import Guards from '~/guards'
                 text: 'Post Update',
                 timeout: 5000
               },
-              guard: 'payment'
+              guard: 'file'
           }
         },
         methods: {
@@ -101,11 +89,12 @@ import Guards from '~/guards'
               }
               await this.$store.dispatch(this.STORE_DIR + '/deleteCurrentPost', data)
               const confirmDelete = this.$store.getters[this.STORE_DIR + '/getConfirmDelete']
-              if(confirmDelete) this.$router.push('/admin/' + this.PATH_CATEGORY)
+              if(confirmDelete) this.$router.push('/admin')
           }
         }
     }
 </script>
 
 <style scoped>
+
 </style>

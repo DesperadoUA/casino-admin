@@ -1,3 +1,3 @@
 export default {
-    PROD_URL: 'https://sloto.top/'
+    PROD_URL: ''
 }

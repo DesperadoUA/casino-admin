@@ -4,8 +4,8 @@ all types: common, casino, game, setting, option, page, license, article
 export default {
     roles: {
         admin: [],
-        editor: ['common', 'casino', 'game', 'setting', 'option', 'page'],
-        guest: ['common', 'game']
+        editor: ['file'],
+        guest: ['file']
     },
     checkLinks(data, role) {
         if(role in this.roles) {

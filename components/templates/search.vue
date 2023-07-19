@@ -54,7 +54,7 @@
                     :key="i"
                     >
                     <v-list-item-content>
-                        <NuxtLink :to="item.permalink" class="search_item font-podkova-bold">
+                        <NuxtLink :to="`/admin/files/${item.id}`" class="search_item font-podkova-bold">
                           <v-list-item-title v-text="item.title"></v-list-item-title>
                         </NuxtLink>
                     </v-list-item-content>
@@ -87,12 +87,12 @@ export default {
                session: user.session,
                id: user.id,
                lang: this.lang,
-               postType: this.postType,
                searchWord: this.searchWord
             }
             if(this.searchWord.trim() !== '') {
               const result = await DAL.getPosts(data)
               if(result.data.confirm === 'ok') {
+                console.log(result.data.body)
                   this.posts = result.data.body
               }
             }

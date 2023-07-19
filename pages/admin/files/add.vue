@@ -24,27 +24,18 @@
 import commonAdd from '~/components/templates/commonAdd.vue'
 import Guards from '~/guards'
     export default {
-        name: "singleLicenseAdd", 
+        name: "fileAdd", 
         layout: 'admin',
         components: {commonAdd},
         mounted() {   
           const user = this.$store.getters['user/getUser']
-          if(!Guards.checkRouts(this.guard, user.role)) this.$router.replace('/admin')
+          if(!Guards.checkRouts(this.guard, user.role)) this.$router.replace('/')
           this.data.body = {
                title:  '',
-               status: 'hide',
                lang: 'ru',
-               post_type: 'license',
-               slug: 'license',
-               meta_title: '',
-               description: '',
-               keywords: '',
-               short_desc: '',
-               h1: '',
-               content: '',
+               path: '',
                updated_at: new Date().toJSON().slice(0,10),
-               created_at: new Date().toJSON().slice(0,10),
-               thumbnail: ''
+               created_at: new Date().toJSON().slice(0,10)
            }
            this.$store.dispatch(this.STORE_DIR + '/setNewPost', this.data.body)
         },
@@ -53,9 +44,9 @@ import Guards from '~/guards'
               data:{
                 body: undefined
               },
-              STORE_DIR: 'license/post',
-              guard: 'license',
-              slug: 'license'
+              STORE_DIR: 'files/post',
+              guard: 'file',
+              slug: 'files'
           }
         },
         methods: {
@@ -66,13 +57,13 @@ import Guards from '~/guards'
                 id: user.id,
                 data: this.$store.getters[this.STORE_DIR + '/getNewPost']
             }
-            if(data.data.title !== '') {
+            if(data.data.title !== '' && data.data.path !== '') {
                 await this.$store.dispatch(this.STORE_DIR + '/addNewPost', data)
                 const insertId = this.$store.getters[this.STORE_DIR + '/getInsertId']
                 if(insertId !== '') this.$router.push(`/admin/${this.slug}/${insertId}`)
             } 
             else {
-                alert('Title empty')
+                alert('Title or path empty')
             }
           }
         }

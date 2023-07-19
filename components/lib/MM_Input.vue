@@ -10,6 +10,7 @@
                       prepend-icon="mdi-tooltip-edit"
                       type="text"
                       color="deep-orange darken-2"
+                      :readonly="readonly"
                       v-model="current_value"
                       @change="onEdit"
               ></v-text-field>
@@ -24,7 +25,7 @@
 <script>
     export default {
         name: "MM_Input",
-        props: ['value', 'title', 'action', 'action_key'],
+        props: ['value', 'title', 'action', 'action_key', 'readonly'],
         data(){
           return {
               current_value: ''

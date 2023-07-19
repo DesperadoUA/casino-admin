@@ -8,9 +8,13 @@
             <v-expansion-panel-content class="pt-4">
               <v-row class="pa-2 mb-2 slider_item_wrapper">
                 <div class="col-lg-3 col-xs-12">
-                  <img :src="current_value"
+                  <video 
+                       v-if="current_value"
                        class="mm_image margin_bottom_15"
+                       :src="current_value"
                   >
+                    <source :src="current_value" type="video/mp4">
+                  </video>
                 </div>
                 <div class="col-lg-3 col-xs-12">
                   <input type="file"
@@ -56,6 +60,7 @@
                       key: this.action_key,
                       value: this.current_value
                     }
+                    console.log(this.current_value)
                     this.$store.dispatch(this.action, obj)    
                   }
                   reader.readAsDataURL(file);
@@ -97,5 +102,8 @@
   .inputFile:focus + label,
   .inputFile + label:hover {
     background-color: #e64a19;
+  }
+  .mm_image {
+    max-width: 100%;
   }
 </style>
